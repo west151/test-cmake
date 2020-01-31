@@ -15,7 +15,6 @@ set(CMAKE_BUILD_TYPE Debug)
 
 set(dir_build ${CMAKE_CURRENT_SOURCE_DIR}/../../build)
 set(EXECUTABLE_OUTPUT_PATH ${dir_build}/bin)
-#set(LIBRARY_OUTPUT_PATH ${dir_build}/bin)
 
 find_library(LIB_CALCULATION calculation ${dir_build}/bin)
 
