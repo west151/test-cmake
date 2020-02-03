@@ -4,13 +4,13 @@
 // add necessary includes here
 #include "calculation.h"
 
-class test_sum_of_elements : public QObject
+class test_calculation : public QObject
 {
     Q_OBJECT
 
 public:
-    test_sum_of_elements();
-    ~test_sum_of_elements();
+    test_calculation();
+    ~test_calculation();
 
 private slots:
     void test_case_1();
@@ -18,17 +18,17 @@ private slots:
     void test_case_3();
 };
 
-test_sum_of_elements::test_sum_of_elements()
+test_calculation::test_calculation()
 {
 
 }
 
-test_sum_of_elements::~test_sum_of_elements()
+test_calculation::~test_calculation()
 {
 
 }
 
-void test_sum_of_elements::test_case_1()
+void test_calculation::test_case_1()
 {
     QVector<int> tst_data;
     tst_data << 0 << 1 << 2 << 3 << 4 << 5 << 6 << 7 << 8 << 9;
@@ -36,7 +36,7 @@ void test_sum_of_elements::test_case_1()
     QCOMPARE(sum_of_elements(tst_data), 45);
 }
 
-void test_sum_of_elements::test_case_2()
+void test_calculation::test_case_2()
 {
     QVector<int> tst_data;
     tst_data << 0 << 1 << 2 << -3 << 4 << 5 << -6 << 7 << 8 << 9;
@@ -44,7 +44,7 @@ void test_sum_of_elements::test_case_2()
     QCOMPARE(sum_of_elements(tst_data), 27);
 }
 
-void test_sum_of_elements::test_case_3()
+void test_calculation::test_case_3()
 {
     int begin = 10;
     int end = 100;
@@ -54,6 +54,6 @@ void test_sum_of_elements::test_case_3()
         QVERIFY( begin >= random_range(begin, end) <= end  );
 }
 
-QTEST_APPLESS_MAIN(test_sum_of_elements)
+QTEST_APPLESS_MAIN(test_calculation)
 
-#include "tst_test_sum_of_elements.moc"
+#include "tst_calculation.moc"

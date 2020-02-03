@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
-
-project(test_sum_of_elements LANGUAGES CXX)
+#test_calculation
+project(test_calculation LANGUAGES CXX)
 
 find_package(Qt5Test REQUIRED)
 
@@ -22,9 +22,9 @@ include_directories("../../libs/calculation")
 
 enable_testing()
 
-add_executable(test_sum_of_elements tst_test_sum_of_elements.cpp)
-add_test(NAME test_sum_of_elements COMMAND test_sum_of_elements)
+add_executable(test_calculation tst_calculation.cpp)
+add_test(NAME test_calculation COMMAND test_calculation)
 
-target_link_libraries(test_sum_of_elements PRIVATE Qt5::Test)
-target_link_libraries(test_sum_of_elements PRIVATE ${LIB_CALCULATION})
+target_link_libraries(test_calculation PRIVATE Qt5::Test)
+target_link_libraries(test_calculation PRIVATE ${LIB_CALCULATION})
 
