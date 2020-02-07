@@ -10,11 +10,6 @@ int sum_of_elements(const QVector<int> &vector)
     return sum;
 }
 
-int random_range(const int &begin, const int &end)
-{
-    return begin + std::rand() % ((end +1) - begin);
-}
-
 float avg_of_elements(const QVector<int> &vector)
 {
     float avg = 0;
@@ -23,4 +18,9 @@ float avg_of_elements(const QVector<int> &vector)
         avg = (float)sum_of_elements(vector)/vector.size();
 
     return avg;
+}
+
+int random_range(const int &begin, const int &end)
+{
+    return begin + std::rand() % ((end +1) - begin);
 }
