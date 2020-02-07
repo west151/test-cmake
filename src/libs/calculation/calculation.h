@@ -8,6 +8,9 @@
 int CALCULATION_EXPORT sum_of_elements(const QVector<int> &);
 
 //
+float CALCULATION_EXPORT avg_of_elements(const QVector<int> &);
+
+//
 int CALCULATION_EXPORT random_range(const int &begin, const int &end);
 
 #endif // CALCULATION_H

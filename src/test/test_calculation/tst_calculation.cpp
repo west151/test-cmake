@@ -16,6 +16,7 @@ private slots:
     void test_case_1();
     void test_case_2();
     void test_case_3();
+    void test_case_avg();
 };
 
 test_calculation::test_calculation()
@@ -52,6 +53,14 @@ void test_calculation::test_case_3()
 
     for(int i = 0; i < test_count; ++i)
         QVERIFY( begin >= random_range(begin, end) <= end  );
+}
+
+void test_calculation::test_case_avg()
+{
+    QVector<int> tst_data;
+    tst_data << 0 << 1 << 2 << 3 << 4 << 5 << 6 << 7 << 8 << 9;
+
+    QCOMPARE(avg_of_elements(tst_data), 4.5);
 }
 
 QTEST_APPLESS_MAIN(test_calculation)
