@@ -17,6 +17,8 @@ private slots:
     void test_case_sum_d2();
     void test_case_random_range();
     void test_case_avg();
+    void test_case_maximum();
+    void test_case_minimum();
 };
 
 test_calculation::test_calculation()
@@ -73,6 +75,30 @@ void test_calculation::test_case_avg()
 
     QBENCHMARK {
         avg_of_elements(tst_data);
+    }
+}
+
+void test_calculation::test_case_maximum()
+{
+    QVector<int> tst_data;
+    tst_data << 0 << 1 << 2 << 3 << 4 << 5 << 6 << 7 << 8 << 9;
+
+    QCOMPARE(maximum_value(tst_data), 9);
+
+    QBENCHMARK {
+        maximum_value(tst_data);
+    }
+}
+
+void test_calculation::test_case_minimum()
+{
+    QVector<int> tst_data;
+    tst_data << 0 << 1 << 2 << 3 << 4 << 5 << 6 << 7 << 8 << 9;
+
+    QCOMPARE(minimum_value(tst_data), 0);
+
+    QBENCHMARK {
+        minimum_value(tst_data);
     }
 }
 
