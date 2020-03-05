@@ -100,6 +100,11 @@ void test_calculation::test_case_minimum()
     QBENCHMARK {
         minimum_value(tst_data);
     }
+
+    tst_data.clear();
+    tst_data << 0 << 1 << 2 << 3 << 4 << -5 << 6 << 7 << 8 << 9;
+
+    QCOMPARE(minimum_value(tst_data), -5);
 }
 
 QTEST_APPLESS_MAIN(test_calculation)
